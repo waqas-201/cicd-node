@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
-    "build": "echo 'No build step needed for plain JS'"
+    "build": "echo 'No build step needed for plain JS'",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -13,5 +14,14 @@
   "description": "",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.30.0",
+    "eslint": "^9.30.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-unicorn": "^59.0.1",
+    "globals": "^16.2.0",
+    "prettier": "^3.6.2"
   }
 }
