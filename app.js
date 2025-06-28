@@ -14,7 +14,7 @@ app.get("/about", (req, res) => {
 app.get("/contact", (req, res) => {
   res.send("This is the contact page.");
 });
-app.get("/services", (req, res) => {  ||||||||||||||||||{}}}}}}}}}}}}}}}}}}
+
 // Start the server
 app.listen(port, () => {
   console.log(`Express app listening at http://localhost:${port}`);
