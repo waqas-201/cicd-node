@@ -8,12 +8,11 @@ app.get("/", (req, res) => {
 });
 //added about route
 app.get("/about", (req, res) => {
-  sdfsdddddddddddddddddddddddd;
   res.send("This is the about page.");
 });
 
 // Start the server
 app.listen(port, () => {
+  // eslint-disable-next-line no-console
   console.log(`Express app listening at http://localhost:${port}`);
 });
-

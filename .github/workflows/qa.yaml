@@ -26,6 +26,7 @@ jobs:
 
       - name: check linting
         run: npm run lint
-
+      - name: audit dependencies
+        run:  npm run audit --audit-level=low  
       - name: Build the project
         run: npm run build
