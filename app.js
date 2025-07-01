@@ -6,7 +6,7 @@ const port = 3000; // You can choose any available port
 app.get("/", (req, res) => {
   res.send("Hello, Express!");
 });
-|||||||||}}}}}}}}
+
 //added about route
 app.get("/about", (req, res) => {
   res.send("This is the about page.");

@@ -1,0 +1,20 @@
+name: 🚀 Test SSH to EC2
+
+on:
+  workflow_dispatch: # manual trigger
+
+jobs:
+  ssh-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🔐 Test SSH Connection
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            echo "✅ Logged into EC2!"
+            whoami
+            uptime
