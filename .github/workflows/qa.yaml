@@ -4,9 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
+ 
 
 jobs:
   build:
@@ -24,8 +22,25 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: check linting
+      - name: Check linting
         run: npm run lint
 
       - name: Build the project
         run: npm run build
+
+  deploy:
+    needs: build  # ⬅️ Wait for CI job to pass
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 Deploy to EC2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd ~/cicd-node
+            git pull origin main
+            npm install
+            pm2 restart my-app
