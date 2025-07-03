@@ -19,6 +19,8 @@ jobs:
           echo "Conclusion: ${{ github.event.workflow_run.conclusion }}"
           echo "Repository: ${{ github.event.workflow_run.head_repository.full_name }}"
           echo "Current Repo: ${{ github.repository }}"
+
+          
       - name: 🚀 Deploy to EC2
         uses: appleboy/ssh-action@v0.1.10
         with:
