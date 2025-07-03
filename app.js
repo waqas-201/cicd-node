@@ -1,6 +1,6 @@
 import express from "express";
 const app = express();
-const port = 3000; // You can choose any available port
+const port = 8080 // You can choose any available port
 
 // Define a simple route
 app.get("/", (req, res) => {
