@@ -45,10 +45,9 @@
               cd ~/cicd-node
               git pull origin main
               npm install
-              pm2 restart app.js
                # Restart if already running, else start it
-                if pm2 list | grep -q 'my-app'; then
-               pm2 restart my-app
+                if pm2 list | grep -q 'app'; then
+               pm2 restart app.js
               else
               pm2 start app.js 
               fi
