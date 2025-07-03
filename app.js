@@ -4,7 +4,7 @@ const port = 8080 // You can choose any available port
 
 // Define a simple route
 app.get("/", (req, res) => {
-  res.send("Hello !");
+  res.send("Hello me !");
 });
 
 //added about route
